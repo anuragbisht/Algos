@@ -9,7 +9,7 @@
 import Foundation
 
 class BinaryTreeNode<Element:Equatable> {
-    //
+    ////
     var value:Element
     var children:Array<BinaryTreeNode> = [] //add all the childern of a node here
     weak var parent:BinaryTreeNode?
