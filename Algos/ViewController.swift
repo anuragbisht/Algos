@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        var list:LinkedList = [1,2,3,4,5,6,7,8,9,10]
+        let list:LinkedList = [1,2,3,4,5,6,7,8,9,10]
         list.printAll()
         list.printMiddleNodeValue()
         list.printNodeAtOneThirdLength()

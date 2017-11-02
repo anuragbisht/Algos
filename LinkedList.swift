@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class LinkedList<Element:Equatable>:ArrayLiteralConvertible {
+class LinkedList<Element:Equatable>:ExpressibleByArrayLiteral {
     var head:Node<Element>
     
     init(){
@@ -37,7 +37,7 @@ class LinkedList<Element:Equatable>:ArrayLiteralConvertible {
         }
     }
     
-    func insert(value:Element){
+    func insert(_ value:Element){
         //check if head is empty or not 
         if head.value == nil{
             
@@ -64,7 +64,7 @@ class LinkedList<Element:Equatable>:ArrayLiteralConvertible {
         }
     }
     
-    func remove(value:Element){
+    func remove(_ value:Element){
         // check if value is at the head 
         if head.value == value{
             head = head.next!
@@ -93,7 +93,7 @@ class LinkedList<Element:Equatable>:ArrayLiteralConvertible {
             currentNode = currentNode.next!
             currentNode1 = currentNode1.next!.next!
         }
-        print("the middle node is \(currentNode.value)")
+        print("the middle node is \(String(describing: currentNode.value))")
     }
     
     func printNodeAtOneThirdLength(){
@@ -103,10 +103,8 @@ class LinkedList<Element:Equatable>:ArrayLiteralConvertible {
             currentNode = currentNode.next!
             currentNode1 = (currentNode1.next?.next?.next!)!
         }
-        print("the  node is \(currentNode.value)")
+        print("the  node is \(String(describing: currentNode.value))")
     }
-    func reverseLinkedList(){
-        UITableView
-    }
+    
 
 }

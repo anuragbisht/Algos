@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Node<Element:Equatable>:NilLiteralConvertible {
+class Node<Element:Equatable>:ExpressibleByNilLiteral {
     var value:Element?
     var next:Node<Element>?
     required init(nilLiteral: ()) {
